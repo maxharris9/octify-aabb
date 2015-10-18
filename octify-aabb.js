@@ -53,14 +53,14 @@
 */
 
 function octifyAabb (box) {
-  var width = (box[0][0] - box[1][0])/2;
-  var height = (box[0][1] - box[1][1])/2;
-  var center = [(box[0][0] + box[1][0])/2, (box[0][1] + box[1][1])/2, (box[0][2] + box[1][2])/2];
+  var width = (box[1][0] - box[0][0])/2;
+  var height = (box[1][1] - box[0][1])/2;
+  var center = [(box[1][0] + box[0][0])/2, (box[1][1] + box[0][1])/2, (box[1][2] + box[0][2])/2];
 
-  var a = box[1];
-  var b = [(box[1][0] + width), box[1][1], box[1][2]];
-  var c = [(box[1][0] + width), (box[1][1] + height), box[1][2]];
-  var d = [box[1][0], (box[1][1] + height), box[1][2]];
+  var a = box[0];
+  var b = [(box[0][0] + width), box[0][1], box[0][2]];
+  var c = [(box[0][0] + width), (box[0][1] + height), box[0][2]];
+  var d = [box[0][0], (box[0][1] + height), box[0][2]];
 
   var e = center;
   var f = [center[0] + width, center[1], center[2]];
@@ -71,10 +71,10 @@ function octifyAabb (box) {
   var j = [center[0], center[1] - height, center[2]];
   var k = [center[0] - width, center[1], center[2]];
 
-  var l = [center[0], center[1], box[0][2]];
-  var m = [center[0] + width, center[1], box[0][2]];
-  var n = box[0];
-  var o = [center[0], center[1] + height, box[0][2]];
+  var l = [center[0], center[1], box[1][2]];
+  var m = [center[0] + width, center[1], box[1][2]];
+  var n = box[1];
+  var o = [center[0], center[1] + height, box[1][2]];
 
   return [[a,e], [b,f], [c,g], [d,h],
           [i,l], [j,m], [e,n], [k,o]];
