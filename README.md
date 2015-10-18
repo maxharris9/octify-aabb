@@ -4,7 +4,7 @@ computes the octants surrounding the center point of an axis-aligned bounding bo
 `npm install octify-aabb`
 
 ```
-var octifyAabb = require('./octify-aabb');
+var octifyAabb = require('octify-aabb');
 var result = octifyAabb([[1,1,1], [-1,-1,-1]]);
 ```
 
