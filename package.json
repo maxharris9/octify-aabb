@@ -1,6 +1,6 @@
 {
   "name": "octify-aabb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "computes the octants surrounding the center point of an axis-aligned bounding box",
   "main": "octify-aabb.js",
   "scripts": {
