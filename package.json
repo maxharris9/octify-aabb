@@ -1,0 +1,31 @@
+{
+  "name": "octify-aabb",
+  "version": "1.0.0",
+  "description": "computes the octants surrounding the center point of an axis-aligned bounding box",
+  "main": "octify-aabb.js",
+  "scripts": {
+    "test": "tape test-octify-aabb.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxharris9/octify-aabb.git"
+  },
+  "keywords": [
+    "aabb",
+    "octant",
+    "octree",
+    "octify",
+    "axis-aligned",
+    "bounding",
+    "box"
+  ],
+  "author": "Max Harris <harris.max@gmail.com> (http://xyzzy.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxharris9/octify-aabb/issues"
+  },
+  "homepage": "https://github.com/maxharris9/octify-aabb#readme",
+  "devDependencies": {
+    "tape": "^4.2.1"
+  }
+}
