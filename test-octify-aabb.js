@@ -2,7 +2,7 @@ var tape = require('tape');
 var octifyAabb = require('./octify-aabb');
 
 tape('test octifyAabb with box that spans origin in all three axes', function (t) {
-  var result = octifyAabb([[1,1,1], [-1,-1,-1]]);
+  var result = octifyAabb([[-1,-1,-1], [1,1,1]]);
 
   var ae = [[-1,-1,-1], [0,0,0]];
   var bf = [[ 0,-1,-1], [1,0,0]];
@@ -28,7 +28,7 @@ tape('test octifyAabb with box that spans origin in all three axes', function (t
 })
 
 tape('test octifyAabb, with box in +x +y +z octant', function (t) {
-  var result = octifyAabb([[6,6,6], [1,1,1]]);
+  var result = octifyAabb([[1,1,1], [6,6,6]]);
 
   var ae = [[1  ,1  ,1], [3.5,3.5,3.5]];
   var bf = [[3.5,1  ,1], [6  ,3.5,3.5]];
